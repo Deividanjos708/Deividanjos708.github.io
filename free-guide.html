@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>5 Income Streams Guide — Free | Ruthless Focus</title>
-<meta name="description" content="Five ways to build income online with no capital and no audience. Free 20-page guide.">
+<meta name="description" content="Five ways to build income online with no capital and no audience. Free 15-page guide.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -50,6 +50,21 @@
     margin:44px 0 14px;
   }
 
+  /* ── CTA principal ── */
+  .get{
+    background:var(--ink-2);border:1px solid var(--line);border-left:3px solid var(--red);
+    padding:26px 22px;margin-top:38px;
+  }
+  .get h2{margin:0 0 8px}
+  .get p.sub{color:var(--g1);font-size:14.5px;line-height:1.55;margin-bottom:20px}
+  a.cta{
+    display:block;background:var(--white);color:var(--ink);text-align:center;text-decoration:none;
+    font-family:var(--mono);font-size:13px;font-weight:700;letter-spacing:.16em;
+    text-transform:uppercase;padding:18px;transition:background .15s ease,color .15s ease;
+  }
+  a.cta:hover{background:var(--red);color:var(--white)}
+  .fineprint{font-family:var(--mono);font-size:10px;color:#777;letter-spacing:.08em;margin-top:13px;line-height:1.7}
+
   .contents{border-top:1px solid var(--line)}
   .item{
     display:flex;gap:16px;padding:15px 0;border-bottom:1px solid var(--line);align-items:baseline;
@@ -57,42 +72,6 @@
   .num{font-family:var(--mono);font-size:11px;font-weight:700;color:var(--red);min-width:22px}
   .item-body h3{font-size:15px;font-weight:900;text-transform:uppercase;letter-spacing:-.01em}
   .item-body p{color:var(--g2);font-size:13.5px;line-height:1.5;margin-top:5px}
-
-  /* ── form ── */
-  .capture{
-    background:var(--ink-2);border:1px solid var(--line);border-left:3px solid var(--red);
-    padding:26px 22px;margin-top:40px;
-  }
-  .capture h2{margin:0 0 8px}
-  .capture p.sub{color:var(--g1);font-size:14px;line-height:1.55;margin-bottom:18px}
-  .field{display:block;margin-bottom:11px}
-  .field span{
-    display:block;font-family:var(--mono);font-size:10px;letter-spacing:.16em;
-    color:var(--g2);text-transform:uppercase;margin-bottom:6px;
-  }
-  input{
-    width:100%;background:var(--ink);border:1px solid var(--line);color:var(--white);
-    font-family:var(--mono);font-size:14px;padding:13px 14px;
-  }
-  input:focus{border-color:var(--red);outline:none}
-  input::placeholder{color:#666}
-  button{
-    width:100%;background:var(--white);color:var(--ink);border:0;cursor:pointer;
-    font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.16em;
-    text-transform:uppercase;padding:16px;margin-top:7px;transition:background .15s ease;
-  }
-  button:hover:not(:disabled){background:var(--red);color:var(--white)}
-  button:disabled{opacity:.5;cursor:not-allowed}
-  .fineprint{font-family:var(--mono);font-size:10px;color:#777;letter-spacing:.08em;margin-top:12px;line-height:1.6}
-  .msg{font-family:var(--mono);font-size:12px;line-height:1.6;margin-top:14px;display:none}
-  .msg.err{color:var(--red);display:block}
-  .msg.ok{color:#22C55E;display:block}
-  .done{display:none}
-  .done a.dl{
-    display:block;background:var(--red);color:var(--ink);text-align:center;text-decoration:none;
-    font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.16em;
-    text-transform:uppercase;padding:16px;margin-top:16px;
-  }
 
   .next{border-top:1px solid var(--line);margin-top:48px;padding-top:26px}
   .next a{
@@ -123,6 +102,14 @@
   <h1>5 Income<br><span class="r">Streams.</span></h1>
   <div class="rule"></div>
   <p class="lede">Five ways to earn online that need <strong>no capital, no audience, and nobody's permission.</strong> Each one has the real numbers, the platform to use, and the first move to make today. No theory. If you read it and do nothing, it was worth exactly what you paid.</p>
+
+  <!-- ── CTA ── -->
+  <section class="get">
+    <h2>Send me the guide</h2>
+    <p class="sub">Enter your email on the next screen and the PDF is yours. It costs nothing and there is nothing to decline.</p>
+    <a class="cta" id="cta" href="#" target="_blank" rel="noopener">Get the guide →</a>
+    <p class="fineprint">No card. No trial. One email a week, unsubscribe in one click.</p>
+  </section>
 
   <h2>What's inside</h2>
   <div class="contents">
@@ -163,37 +150,6 @@
     </div>
   </div>
 
-  <!-- ── capture ── -->
-  <section class="capture">
-    <div id="form-view">
-      <h2>Send me the guide</h2>
-      <p class="sub">Enter your email. The download opens immediately and a copy lands in your inbox.</p>
-
-      <form id="lead-form" novalidate>
-        <label class="field">
-          <span>First name</span>
-          <input type="text" name="name" id="name" placeholder="Alex" autocomplete="given-name" required>
-        </label>
-        <label class="field">
-          <span>Email</span>
-          <input type="email" name="email" id="email" placeholder="you@email.com" autocomplete="email" required>
-        </label>
-        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
-        <button type="submit" id="submit-btn">Get the guide →</button>
-      </form>
-
-      <p class="msg" id="msg" role="alert"></p>
-      <p class="fineprint">One email a week. Unsubscribe in one click. Your address is never sold or shared.</p>
-    </div>
-
-    <div id="done-view" class="done">
-      <h2>You're in</h2>
-      <p class="sub">The guide is downloading now. If it doesn't start, use the button below.</p>
-      <a class="dl" id="dl-link" href="downloads/5-income-streams-guide.pdf" download>Download the PDF →</a>
-      <p class="fineprint">Read it today, not "later." Later is where this stuff goes to die.</p>
-    </div>
-  </section>
-
   <section class="next">
     <h2 style="margin-top:0">When you've read it</h2>
     <a href="store.html#blueprint">
@@ -211,61 +167,16 @@
 <script>
 (function(){
   /* ── CONFIGURE THIS ──────────────────────────────────────
-     Paste your Formspree endpoint below (formspree.io → new form).
-     Free plan handles 50 submissions/month.
-     Leave as-is to test the flow without sending anything.      */
-  var ENDPOINT = 'https://formspree.io/f/mrpzzwpq';
+     A URL do produto gratis na Gumroad. Ela coleta o e-mail
+     e entrega o PDF sozinha. Para trocar, mude so esta linha. */
+  var CHECKOUT = 'https://ruthlessfocus.gumroad.com/l/freeguide';
   /* ─────────────────────────────────────────────────────── */
 
   var y = new Date().getFullYear();
   var left = Math.ceil((new Date(y,11,31,23,59,59) - new Date())/86400000);
   document.getElementById('clock').innerHTML = '<b>' + left + ' days left in ' + y + '.</b>';
 
-  var form = document.getElementById('lead-form');
-  var btn  = document.getElementById('submit-btn');
-  var msg  = document.getElementById('msg');
-
-  function fail(text){ msg.className = 'msg err'; msg.textContent = text; }
-
-  function succeed(){
-    document.getElementById('form-view').style.display = 'none';
-    document.getElementById('done-view').style.display = 'block';
-    var a = document.getElementById('dl-link');
-    setTimeout(function(){ a.click(); }, 400);
-  }
-
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-    msg.className = 'msg';
-    var name  = document.getElementById('name').value.trim();
-    var email = document.getElementById('email').value.trim();
-
-    if(!name){ fail('Add your first name so the email isn\'t addressed to nobody.'); return; }
-    if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)){ fail('That email address isn\'t valid. Check it and try again.'); return; }
-
-    btn.disabled = true;
-    btn.textContent = 'Sending…';
-
-    if(ENDPOINT.indexOf('YOUR_FORM_ID') !== -1){
-      setTimeout(succeed, 500);   // test mode — nothing is sent
-      return;
-    }
-
-    fetch(ENDPOINT, {
-      method:'POST',
-      headers:{'Accept':'application/json','Content-Type':'application/json'},
-      body: JSON.stringify({name:name, email:email, source:'free-guide'})
-    })
-    .then(function(r){
-      if(r.ok){ succeed(); }
-      else{ throw new Error('rejected'); }
-    })
-    .catch(function(){
-      btn.disabled = false;
-      btn.textContent = 'Get the guide →';
-      fail('That didn\'t go through. Check your connection and try again.');
-    });
-  });
+  document.getElementById('cta').setAttribute('href', CHECKOUT);
 })();
 </script>
 
